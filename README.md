@@ -1,4 +1,4 @@
-# SDF-Assignments
+# Software Development Fundamentals
 
 Compilation of assignments completed for the course **Software Development Fundamentals (SDF)**.
 
