@@ -89,7 +89,7 @@ print(dictdiff(d1,d5))
 # Input for problem 5 is taken by this code.
 n = int(input("Enter the number of records in your list of strings: "))
 PEOPLE = []
-for i in range(1, n):
+for i in range(n):
     f = str(input("Enter first name: "))
     l = str(input("Enter last name: "))
     n = str(input("Enter number of twitter followers in millions: "))
@@ -120,7 +120,7 @@ print(alphabetize_names(PEOPLE))
 # Input for problem 6 is taken by this code.
 n = int(input("Enter the number of strings in your list of strings: "))
 words = []
-for i in range(1, n):
+for i in range(n):
     s = str(input("Enter string: "))
     words.append(s)
 # Function definition
@@ -153,7 +153,7 @@ most_repeating_word(words)
 # Input for problem 7 is taken by this code.
 n = int(input("Enter the number of records in your list of strings: "))
 PEOPLE = []
-for i in range(1, n):
+for i in range(n):
     f = str(input("Enter first name: "))
     l = str(input("Enter last name: "))
     n = str(input("Enter number of twitter followers in millions: "))

@@ -9,33 +9,35 @@ Make, functional programming in OCaml, Linux shell commands and scripting, and P
 
 | Topic | Folder | What it contains |
 |---|---|---|
-| Linking in C | `Assignment 1 - Linkers in C.docx` | Short write-up on what a linker does and how it is used in a C toolchain |
-| OCaml basics | `Assignment 2 - Intro to OCaml.docx` | Tour of OCaml: `utop` experiments, modified expressions and explanations of the type errors |
-| Functional programming in OCaml | `Assignment 3 - OCaml Practice Problems/` | Eight problems: list splitting, `filter_map`, flattening, binary trees, `option` results (`safe_div`), a shape variant type, and exceptions (`find_index`), all via pattern matching and recursion |
-| Linux shell | `Assignment 4`, `5`, `6 - Linux shell commands/` | Command-line exercises with captured sessions (screenshots) and `Assign6.sh` |
-| More OCaml | `Assignment 7 - OCaml Additional Practice/` | Additional OCaml problems (`OCaml Practice Assignment.ml`) |
-| Shell scripting | `Assignment 8 - Shell Scripting/` | Nine scripts (`Problem_1.sh` … `Problem_9.sh`) over text and CSV input files |
-| Python text processing | `Assignment 9 - Python/` | Python script plus notebooks: Collatz step count, reversing a file's lines and other file-processing functions |
-| Multi-binary Makefile | `Assignment 10 - MultiBinary Makefile/` | Three binaries (`mathop`, `stringop`, `dataop`) built from shared headers in `include/` and per-module sources in `src/` |
+| Linking in C | `problem-statements/linking-in-c.docx` | Short write-up on what a linker does and how it is used in a C toolchain |
+| OCaml basics | `problem-statements/intro-to-ocaml.docx` | Tour of OCaml: `utop` experiments, modified expressions and explanations of the type errors |
+| Functional programming in OCaml | `ocaml-practice-problems/` | Eight problems: list splitting, `filter_map`, flattening, binary trees, `option` results (`safe_div`), a shape variant type, and exceptions (`find_index`), all via pattern matching and recursion |
+| Linux shell | `linux-shell-1/`, `linux-shell-2/`, `linux-shell-3/` | Command-line exercises with captured sessions (screenshots) and `Assign6.sh` |
+| More OCaml | `ocaml-additional-practice/` | Additional OCaml problems |
+| Shell scripting | `shell-scripting/scripts/` | Nine scripts (`Problem_1.sh` … `Problem_9.sh`): dates, renaming, word lookup, file generation, a phonebook, CSV column arithmetic, arithmetic-progression row appending, a spell checker and file combining |
+| Python text processing | `python-text-processing/` | Collatz step count, reversing a file's lines, word and character counts, dictionary diffs, record sorting and gematria; notebook version alongside |
+| Multi-binary Makefile | `multi-binary-makefile/` | Three binaries (`math_ops`, `string_ops`, `data_ops`) plus a combined `all_ops`, built from shared headers in `include/` and per-module sources in `src/`, with a `DEBUG=1` mode |
 
-The `.docx` and `.pdf` files at the top level are the problem statements for the shell scripting, Python and
-Makefile exercises.
+Problem statements for the shell scripting, Python and Makefile exercises are in `problem-statements/`.
 
 ## Running things
 
 ```bash
-# OCaml (needs ocaml / utop)
-ocaml "Assignment 3 - OCaml Practice Problems/problem_1.ml"
+# OCaml (needs ocaml; utop is optional)
+ocaml ocaml-practice-problems/problem_1.ml
 
-# Shell scripts: run from inside the folder, since they read the input files next to them
-cd "Assignment 8 - Shell Scripting/Assign8_cs24btech11036" && bash Problem_1.sh
+# Shell scripts read and write files next to them, so run them from their folder
+cd shell-scripting/scripts && bash Problem_1.sh
 
-# Python
-python3 "Assignment 9 - Python/CS24BTECH11036/CS24BTECH11036.py"
+# Python (interactive: it prompts for each problem's input)
+cd python-text-processing/solution && python3 CS24BTECH11036.py
 
-# Multi-binary build: see the .mak file in the folder
-make -f "Assignment 10 - MultiBinary Makefile/Assignment_10_CS24BTECH11036.mak"
+# Multi-binary build
+cd multi-binary-makefile && make && ./all_ops      # or: make DEBUG=1, make clean
 ```
+
+`Problem_8.sh` (spell checker) uses `/usr/share/dict/words` when present and otherwise falls back to the
+`words.txt` next to it.
 
 ## License
 
