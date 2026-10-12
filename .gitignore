@@ -1,0 +1,9 @@
+# build output
+*.o
+*.d
+*.exe
+math_ops
+string_ops
+data_ops
+all_ops
+*.spelling

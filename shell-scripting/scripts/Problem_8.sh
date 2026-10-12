@@ -3,6 +3,13 @@ if [ $# -eq 0 ]; then
     echo "Usage: spellcheck filename" >&2
     exit 1
 fi
+# Use the system dictionary when present, otherwise the words.txt shipped next to this script.
+dict=/usr/share/dict/words
+[ -r "$dict" ] || dict="$(dirname "$0")/words.txt"
+if [ ! -r "$dict" ]; then
+    echo "No word list found (install a dictionary package or provide words.txt)" >&2
+    exit 1
+fi
 for file in "$@"; do
     if [ ! -f "$file" ]; then
         echo "Error: $file does not exist. Skipping..." >&2
@@ -23,7 +30,7 @@ for file in "$@"; do
             continue
         fi
         ((total_words++))
-        if ! grep -qi "^${clean_word}$" /usr/share/dict/words; then
+        if ! grep -qi "^${clean_word}$" "$dict"; then
             echo "$clean_word" >> "$spelling_file"
         fi
     done < <(tr ' ' '\n' < "$file")
