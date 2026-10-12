@@ -12,7 +12,7 @@ Make, functional programming in OCaml, Linux shell commands and scripting, and P
 | Linking in C | `problem-statements/linking-in-c.docx` | Short write-up on what a linker does and how it is used in a C toolchain |
 | OCaml basics | `problem-statements/intro-to-ocaml.docx` | Tour of OCaml: `utop` experiments, modified expressions and explanations of the type errors |
 | Functional programming in OCaml | `ocaml-practice-problems/` | Eight problems: list splitting, `filter_map`, flattening, binary trees, `option` results (`safe_div`), a shape variant type, and exceptions (`find_index`), all via pattern matching and recursion |
-| Linux shell | `linux-shell-1/`, `linux-shell-2/`, `linux-shell-3/` | Command-line exercises with captured sessions (screenshots) and `Assign6.sh` |
+| Linux shell | `linux-shell-1/`, `linux-shell-2/`, `linux-shell-3/` | Command-line exercises with captured sessions (screenshots); `linux-shell-3/Assign6.sh` is a directory watcher that keeps timestamped backups of modified files (needs `inotify-tools`) |
 | More OCaml | `ocaml-additional-practice/` | Additional OCaml problems |
 | Shell scripting | `shell-scripting/scripts/` | Nine scripts (`Problem_1.sh` … `Problem_9.sh`): dates, renaming, word lookup, file generation, a phonebook, CSV column arithmetic, arithmetic-progression row appending, a spell checker and file combining |
 | Python text processing | `python-text-processing/` | Collatz step count, reversing a file's lines, word and character counts, dictionary diffs, record sorting and gematria; notebook version alongside |
