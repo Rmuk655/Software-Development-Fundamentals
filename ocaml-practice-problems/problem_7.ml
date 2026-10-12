@@ -1,7 +1,7 @@
 exception NotFound of string;;
 let rec find_index predicate list index = 
   match list with
-  |[] -> raise (NotFound (Printf.sprintf "Not found at index %d in a list of size %d" index (List.length list)))
+  |[] -> raise (NotFound (Printf.sprintf "Not found in a list of size %d" index))
   |x :: u -> 
     if predicate x then
       index
