@@ -25,8 +25,7 @@ let rec last_2 list =
 let rec list_n n list = 
     match list with
     | [] -> None
-    | [ x ] -> if n = 0 then Some x else None
-    | x :: (b :: c as v) -> if n = 1 then Some b else list_n (n - 1) v;;
+    | x :: v -> if n = 0 then Some x else if n < 0 then None else list_n (n - 1) v;;
 (*Question 5: Reverse a List*)
 (*Soln 5:*)
 let rec rev list = 
@@ -154,9 +153,11 @@ let rec merge_two a b = Node ((get_freq a) + (get_freq b), a, b)
 let rec merge_nodes nodes = 
   match List.sort freq_compare nodes with
   | a::b::rest -> (merge_two a b) :: rest
+  | _ -> nodes
 
 let rec create_huffmann_tree nodes = 
   match nodes with
+  | [] -> invalid_arg "create_huffmann_tree: empty input"
   | [ x ] -> x
   | _ -> create_huffmann_tree (merge_nodes nodes)
 
