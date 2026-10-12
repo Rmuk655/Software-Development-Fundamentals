@@ -11,11 +11,11 @@ Make, functional programming in OCaml, Linux shell commands and scripting, and P
 |---|---|---|
 | Linking in C | `Assignment 1 - Linkers in C.docx` | Short write-up on what a linker does and how it is used in a C toolchain |
 | OCaml basics | `Assignment 2 - Intro to OCaml.docx` | Tour of OCaml: `utop` experiments, modified expressions and explanations of the type errors |
-| Functional programming in OCaml | `Assignment 3 - OCaml Practice Problems/` | Eight problems (list splitting and other list/recursion exercises) using pattern matching and recursion |
+| Functional programming in OCaml | `Assignment 3 - OCaml Practice Problems/` | Eight problems: list splitting, `filter_map`, flattening, binary trees, `option` results (`safe_div`), a shape variant type, and exceptions (`find_index`), all via pattern matching and recursion |
 | Linux shell | `Assignment 4`, `5`, `6 - Linux shell commands/` | Command-line exercises with captured sessions (screenshots) and `Assign6.sh` |
 | More OCaml | `Assignment 7 - OCaml Additional Practice/` | Additional OCaml problems (`OCaml Practice Assignment.ml`) |
 | Shell scripting | `Assignment 8 - Shell Scripting/` | Nine scripts (`Problem_1.sh` … `Problem_9.sh`) over text and CSV input files |
-| Python text processing | `Assignment 9 - Python/` | Python script plus notebook for file and line processing (reversal, word counts) |
+| Python text processing | `Assignment 9 - Python/` | Python script plus notebooks: Collatz step count, reversing a file's lines and other file-processing functions |
 | Multi-binary Makefile | `Assignment 10 - MultiBinary Makefile/` | Three binaries (`mathop`, `stringop`, `dataop`) built from shared headers in `include/` and per-module sources in `src/` |
 
 The `.docx` and `.pdf` files at the top level are the problem statements for the shell scripting, Python and
